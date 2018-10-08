@@ -74,6 +74,7 @@ class S3 extends DataObject
         if ($this->helper->getEndpointEnabled()) {
             if ($this->helper->getEndpoint()) {
                 $options['endpoint'] = $this->helper->getEndpoint();
+                $options['use_path_style_endpoint'] = true;
             }
 
             if ($this->helper->getEndpointRegion()) {
